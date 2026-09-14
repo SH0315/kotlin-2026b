@@ -27,7 +27,38 @@ class MainActivity : ComponentActivity() {
                 }
             }
         }
+        week03Variables()
     }
+}
+
+private fun week03Variables() {
+    println("Week 03 : Variables")
+
+    val courseName = "Mobile Programming" // val : 자바에서 final 역할
+    var week = 2
+    week = 3
+    println("Course : $courseName")
+    println("Week : $week")
+
+    println("======== Kotlin Variables =========")
+    // val (immutable) vs var (mutable)
+    // 타입 추론
+    val name = "Android"
+    var version = 8
+
+    println("Hi $name $version")
+
+    // 타입 지정
+    val age : Int = 24
+    val height : Double = 183.3
+    val isStudent : Boolean = false
+    println("Age : $age Height : $height Student :  $isStudent")
+
+    //var nickname : String = null
+    var nickname : String? = null
+    nickname = "SangHyeok"
+    println("Nickname : $nickname ${nickname?.length}")
+    // NULL 값이 할당 될수도 있기에 ?.으로 기능을 사용해야함
 }
 
 @Composable
