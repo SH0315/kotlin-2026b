@@ -72,22 +72,20 @@ private fun week03Functions(){
 
     println("== Kotlin Functions ==")
 
-    fun greet(name: String): String {
-        return "Hello, $name!"
+    fun printAll(vip: Boolean, name: String){
+        println("$vip, $name")
     }
 
-    fun add(a: Int, b: Int) = a + b
-
-    fun introduce(name: String, age: Int = 19){
-        println("My name is $name and I'm $age years old")
+    fun printMany(vararg msg: String){  // variable arguments
+        for(m in msg) println(m)
     }
 
-    println(greet("Kotlin"))
-    println("Sum: ${add(5, -71)}")
-    introduce("Kim", 7)
-    introduce("Park")
+//    printAll("dy", true)
+    printAll(true, "dy")
+    printAll(name = "mirae", vip = true)  // named arguments
+
+    printMany("A", "B", "C", "D")
 }
-
 
 @Composable
 fun Greeting(name: String, modifier: Modifier = Modifier) {
