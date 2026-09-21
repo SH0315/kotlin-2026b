@@ -87,7 +87,7 @@ private fun week04Collections(){
     }
 
     scores.forEach{(name,score) -> println("$name scored $score")}
-
+    fruits.forEach{fruits -> println("$fruits")}
 }
 
 private fun week03Variables() {
