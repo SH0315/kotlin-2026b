@@ -29,7 +29,56 @@ class MainActivity : ComponentActivity() {
         }
         week03Variables()
         week03Functions()
+        week04Classes()
+        week04Collections()
     }
+}
+
+
+private fun week04Classes(){
+    println("== Kotlin Classes ==")
+
+    //클래스 생성 (생성자 X)
+    class Student {
+        var name : String = ""
+        var age : Int = 0
+
+        fun introduce(){
+            println("안녕 나는 $name 이고 $age 살이야")
+        }
+    }
+
+    //객체 생성 1
+    val student1 = Student()
+    student1.name="Mirae"
+    student1.age = 21
+    student1.introduce()
+
+
+    //클래스 생성 (생성자 O)
+    data class Person (val name : String, val age :Int)
+
+    //객체 생성 2
+    val person1 = Person("Kim", 23)
+    val person2 = Person("Park", 21)
+    println("Person1 : $person1")
+    println("Person1 : ${person1.name}님은 ${person1.age}살입니다")
+    println("Person2 : $person2")
+
+
+
+}
+
+private fun week04Collections(){
+    println("== Kotlin Collections ==")
+
+    //리스트 생성
+    val fruits = listOf("apple", "banana", "orange")
+    val mutableFruits = mutableListOf("kiwi", "watermelon")
+
+    println("Fruits : $fruits")
+    mutableFruits.add("banana")
+    println("Mutable fruits : $ mutableFruits")
 }
 
 private fun week03Variables() {
@@ -62,7 +111,7 @@ private fun week03Variables() {
     // NULL 값이 할당 될수도 있기에 ?.으로 기능을 사용해야함
 }
 
-private fun week03Functions(){
+private fun week03Functions() {
 //    println("Week 03: Functions")
 //
 //    fun greet(name: String) = "Hello, $name!"
@@ -71,20 +120,16 @@ private fun week03Functions(){
 
     println("== Kotlin Functions ==")
 
-    fun greet(name: String): String {
-        return "Hello, $name!"
+    fun printAll(vip: Boolean, name: String) {
+        println("$vip, $name")
     }
 
-    fun add(a: Int, b: Int) = a + b
-
-    fun introduce(name: String, age: Int = 19){
-        println("My name is $name and I'm $age years old")
+    fun printMany(vararg msg: String) {
+        for (m in msg) println(m)
     }
 
-    println(greet("Kotlin"))
-    println("Sum: ${add(5, -71)}")
-    introduce("Kim", 7)
-    introduce("Park")
+    printAll(name = "mirae", vip = true)
+    printMany("A", "B", "C", "D")
 }
 
 
