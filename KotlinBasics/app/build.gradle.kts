@@ -40,6 +40,10 @@ android {
 }
 
 dependencies {
+<<<<<<< HEAD
+=======
+
+>>>>>>> 5a56584274efc868051d1b48a5f4dac2bc4f6aac
     //implementation(libs.androidx.core.ktx)
     implementation("androidx.core:core-ktx:1.15.0")
     //implementation(libs.androidx.lifecycle.runtime.ktx)
